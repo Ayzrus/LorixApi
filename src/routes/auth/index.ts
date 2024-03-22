@@ -18,7 +18,8 @@ router.get(
     // Gera um token JWT contendo os dados do usuário
     const token = jwt.sign(
       { data: userData },
-      "YQz#*P$u7#8ZC![tT7n&AZ0XAMS7n6"
+      "YQz#*P$u7#8ZC![tT7n&AZ0XAMS7n6",
+      { expiresIn: '1d' }
     );
 
     // Armazena o token JWT no localStorage
